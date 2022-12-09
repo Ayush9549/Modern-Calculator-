@@ -1,0 +1,679 @@
+ body 
+ {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(236, 240, 243);
+    font-weight: bold;
+    /*font-family: sans-serif;;*/
+}
+
+.calculator
+{
+    margin-top: 150px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 440px;
+    /*background: red;*/
+    box-shadow: 13px 13px 20px rgb(203, 206, 209), -13px -13px 20px #ffffff;
+}
+
+#screen
+{
+    width: 417px;
+    height: 30px;
+    font-size: 35px;
+    outline: none;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    border: none;
+    font-family: myFont;
+    text-align: right;
+    padding-right: .5em;
+    background: rgb(236, 240, 243);
+    border-radius: 6px;
+    box-shadow: inset 8px 8px 8px rgb(205, 206, 209),  inset -8px -8px 8px #ffffff;
+}
+
+@font-face
+{
+    font-family: myFont;
+    src: url(minisystem.ttf);
+}
+
+#all-clear
+{
+    width: 60px;
+    height: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 0 5px 0;
+    border-radius: 4px;
+    display: inline-block;
+    transition: .1s;
+    background: #33cc33;
+    color: #fff;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#all-clear:hover
+{
+    box-shadow: inset 5px 5px 8px #2eb82e,
+    inset -5px -5px 8px #33cc33;
+}
+
+#one-clear
+{
+    width: 60px;
+    height: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    text-align: center;
+    margin-top: -40px;
+    padding: 5px 0 5px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    /*display: inline-block;*/
+    margin-left: 375px;
+    transition: .1s;
+    margin-bottom: 10px;
+    background: #ff3399;
+    color: #fff;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#one-clear:hover
+{
+    box-shadow: inset 5px 5px 8px #e60073,
+    inset -5px -5px 8px #ff3399;
+}
+
+#sin
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    margin-left: 5px;
+    margin-top: 15px;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#sin:active
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#six
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 10px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#six:active
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#svn
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#svn:active
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#et
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#et:active
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#nin
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#nin:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#divid
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 5px;
+    border-radius: 4px;
+    margin-bottom: 17px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#divid:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#cos
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+    display: inline-block;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#cos:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#to
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#to:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#thri
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#thri:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#for
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    display: inline-block;
+    outline: none;
+    margin-right: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#for:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#fiv
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#fiv:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+
+#mltipl
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    margin-bottom: 17px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#mltipl:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#tan
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    margin-bottom: 17px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#tan:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+
+#one
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#one:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+   
+#zro
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#zro:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+   
+#dot
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#dot:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+ }   
+   
+#minus
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#minus:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#addisn
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#addisn:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#eqvl
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    background: rgb(51, 204, 255);
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#eqvl:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#prcnt
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#prcnt:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#pie
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#pie:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+}
+
+#log
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#log:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+   
+}
+
+
+#ob
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#ob:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+   
+}
+#cb
+{
+    width: 60px;
+    height: 20px;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    transition: .1s;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13), -5px -5px 8px #ffff;
+}
+
+#cb:hover
+{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),  inset -5px -5px 8px #fff;
+    background: #fff;
+   
+}
